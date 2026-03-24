@@ -1,11 +1,10 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Nabla');
-@import url('https://fonts.googleapis.com/css2?family=Honk:MORF@15');
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sriracha&display=swap');
 
 :root {
-    --fonte-destaque: 'Nabla', 'Honk', Arial;
+    --fonte-destaque: 'Roboto', Arial;
     --fonte-padrao: 'Passion One', Arial, Helvetica, sans-serif;
 
     --cor1: rgb(1, 53, 116);
@@ -20,8 +19,6 @@ body, html {
 
 body {
     min-height: 100vh;
-    background-image: linear-gradient(135deg, rgb(1, 53, 116), rgb(61, 86, 230), rgb(91, 250, 253));
-    background-attachment: fixed;
 }
 
 * {
@@ -32,13 +29,18 @@ body {
 
 header {
     text-align: center;
-
+    padding: 40px 0;
+    background-color: var(--cor2);
 }
 
 header > h1 {
+    font-weight: bold;
+    color: var(--cor4);
+    text-transform: uppercase;
+    letter-spacing: -10%;
+    text-shadow: 3px 3px 10px var(--cor1);
     font-family: var(--fonte-destaque);
     font-size: 10vw;
-    padding: 20px 0 0 0;
 }
 
 header > h1+p {
@@ -62,7 +64,7 @@ ul.menu {
 
 li {
     display: inline-block;
-    padding: 20px 100px 20px 100px;
+    padding: 20px 100px;
 }
 
 .menu-link:hover {
@@ -72,44 +74,84 @@ li {
     background-color: var(--cor4);
 }
 
+div.separador {
+    background-color: var(--cor2);
+    height: 40px;
+    margin: -40px -20px;
+}
+
 main {
-    padding: 40px 20px;
+    padding: 0 20px;
     text-align: center;
 }
 
 section.conteudo {
+    margin: 100px 0px;
     text-align: center;
-    padding: 20px;
-    color: white;
-    background-color: var(--cor1);
-    border-radius: 20px;
-    margin: 20px;
-    box-shadow: 2px 2px 5px var(--cor3);
+    color: var(--cor2);
 }
 
 h2.titulos-h2 {
+    margin: 10px;
     font-variant: small-caps;
     font-size: 3rem;
+    text-align: center;
 }
 
 p.conteudo-paragrafo {
-    font-family: Arial, Helvetica, sans-serif;
+    color: var(--cor1);
+    margin: 10px;
     text-align: center;
-    font-size: 1.4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7rem;
     font-weight: normal;
-    line-height: 2.3rem;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    line-height: 2rem;
+}
+
+section.imagem {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0px -20px;
+    background-color: var(--cor1);
+    background-attachment: fixed;
+}
+
+section#primeira {
+    background-image: url('../img/header.png');
+}
+
+div.sombra {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(1, 53, 116, 0.6);
+}
+
+section.conteudo-imagem {
+    padding: 40px;
+}
+
+section.conteudo-imagem h2 {
+    color: var(--cor4);
+    
+}
+
+section.conteudo-imagem p {
+    color: white;
+    text-align: center;
+    margin: 20px;
 }
 
 a {
-    color: var(--cor3);
+    color: var(--cor4);
     text-decoration: none;
     font-weight: bold;
 }
 
 a:hover {
     text-decoration: underline;
-    color: var(--cor4);
+    color: var(--cor3);
 }
 
 .websites {
@@ -120,14 +162,14 @@ a:hover {
 .card-website {
     padding: 10px;
     width: 80%;
-    background-color: var(--cor3);
+    background-color: var(--cor1);
     height: 200px;
     border-radius: 10px;
-    box-shadow: 2px 2px 10px white;
+    box-shadow: 2px 2px 10px var(--cor4);
 }
 
 .card-website:hover {
-    box-shadow: 2px 2px 10px var(--cor4);
+    box-shadow: 2px 2px 10px var(--cor3);
 }
 
 .card-website:hover p {
